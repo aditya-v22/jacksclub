@@ -54,7 +54,7 @@
 
 	$effect(() => {
 		window.alert(`Hello!
-Please use the correct code "123456" to show the success UI.`);
+Please use the correct code "123456" to see the success UI.`);
 
 		moveFocus(0);
 	});
