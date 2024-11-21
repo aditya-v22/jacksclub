@@ -51,6 +51,13 @@
 			setActiveFieldIndex(-1);
 		}
 	};
+
+	$effect(() => {
+		window.alert(`Hello!
+Please use the correct code "123456" to show the success UI.`);
+
+		moveFocus(0);
+	});
 </script>
 
 <div
