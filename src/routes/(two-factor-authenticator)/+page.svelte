@@ -9,8 +9,8 @@
 		<Lock />
 
 		<div class="mb-14 mt-4 text-center">
-			<h1 class="text-dark text-5xl font-semibold">Easy peasy</h1>
-			<p class="text-secondary-200 mt-6 font-medium">
+			<h1 class="text-dark text-4xl font-semibold">Easy peasy</h1>
+			<p class="text-secondary-200 mt-5 font-medium">
 				Enter 6-digit code from your two factor authenticator APP.
 			</p>
 		</div>

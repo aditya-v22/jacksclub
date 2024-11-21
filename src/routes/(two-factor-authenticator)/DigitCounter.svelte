@@ -9,7 +9,7 @@
 
 <div
 	class={cn(
-		'bg-secondary-200/20 relative mt-10 flex w-full items-center justify-center rounded-xl px-6 py-4 text-lg font-semibold text-gray-500 transition-all',
+		'bg-secondary-200/20 relative mt-12 flex w-full items-center justify-center rounded-xl px-6 py-4 text-lg font-semibold text-gray-500 transition-all',
 		{
 			'text-secondary-100': remainingDigits === 0,
 			'animate-bounce-once': isInvalidCode
