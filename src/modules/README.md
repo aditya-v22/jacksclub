@@ -38,3 +38,7 @@ To add a new feature/module to the application:
 - **Reusable Components**: Keep UI components flexible and reusable across different parts of the application.
 - **Testing**: Always write tests for new functionality. Aim for a high level of test coverage, especially for critical application features.
 - **Documentation**: Document the purpose and usage of key files and functions to make it easier for other developers to work with your code.
+
+## Note
+
+Items that do not belong to a specific module, such as `shared utilities`, `constants`, or global `components`, should be kept in relevant directories outside the `modules/` folder. This helps maintain a clean separation between feature-specific and generic code, ensuring better scalability and reusability.
