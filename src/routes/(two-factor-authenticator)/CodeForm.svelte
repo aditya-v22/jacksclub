@@ -5,8 +5,11 @@
 	import { validateNumber } from '$lib/validations/common';
 	import { twoFA_Store, setActiveFieldIndex, setCode, TOTAL_DIGITS } from '../../stores/2FA_Store';
 
-	const isInvalidCode = $derived($twoFA_Store.remainingDigits === 0 && !$twoFA_Store.isCodeValid);
 	const secondLastIndex = TOTAL_DIGITS - 1;
+
+	const code = $derived($twoFA_Store.code);
+	const activeFieldIndex = $derived($twoFA_Store.activeFieldIndex);
+	const isInvalidCode = $derived($twoFA_Store.remainingDigits === 0 && !$twoFA_Store.isCodeValid);
 
 	// Move focus to next input
 	const moveFocus = (index: number) => {
@@ -22,9 +25,7 @@
 	const handleBackspace = (event: KeyboardEvent, index: number) => {
 		if (event.key === 'Backspace' && index > 0) {
 			const currentIndex =
-				index === secondLastIndex && $twoFA_Store.code[secondLastIndex] !== ''
-					? secondLastIndex
-					: index - 1;
+				index === secondLastIndex && code[secondLastIndex] !== '' ? secondLastIndex : index - 1;
 
 			setCode('', index);
 			moveFocus(currentIndex);
@@ -67,10 +68,10 @@ Please use the correct code "123456" to see the success UI.`);
 		'animate-bounce-once': isInvalidCode
 	})}
 >
-	{#each $twoFA_Store.code as _digit, index}
+	{#each code as _digit, index}
 		<DigitInput
 			invalid={isInvalidCode}
-			focused={index === $twoFA_Store.activeFieldIndex}
+			focused={index === activeFieldIndex}
 			bind:value={$twoFA_Store.code[index]}
 			onClick={() => moveFocus(index)}
 			onInputChange={(event) => handleInputChange(event, index)}
