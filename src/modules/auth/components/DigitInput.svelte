@@ -10,7 +10,7 @@
 </script>
 
 <script lang="ts">
-	import { cn } from '$lib/utils/helper';
+	import { cn } from '$lib';
 
 	let {
 		onClick,

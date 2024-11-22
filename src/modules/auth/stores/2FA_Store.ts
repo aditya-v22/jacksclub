@@ -14,7 +14,6 @@ const defaultState: CodeVerificationState = {
 	remainingDigits: 6
 };
 
-export const TOTAL_DIGITS = 6;
 export const twoFA_Store = writable<CodeVerificationState>(defaultState);
 
 export const setCode = (value: string, index: number) => {

@@ -1,4 +1,4 @@
-import { NUMBER_REGEX } from '$lib/constants/regex';
+import { NUMBER_REGEX } from '../../constants/regex';
 
 /**
  * Checks if a given string is a valid number.

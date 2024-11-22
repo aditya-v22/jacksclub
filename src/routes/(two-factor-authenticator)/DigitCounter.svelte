@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { cn } from '$lib/utils/helper';
-	import { twoFA_Store } from '../../stores/2FA_Store';
+	import { cn } from '$lib';
+	import { twoFA_Store } from '../../modules/auth/stores/2FA_Store';
 
 	const remainingDigits = $derived($twoFA_Store.remainingDigits);
 	const isValidCode = $derived($twoFA_Store.isCodeValid);
@@ -9,7 +9,7 @@
 
 <div
 	class={cn(
-		'bg-secondary-200/20 relative mt-12 flex w-full items-center justify-center rounded-xl px-6 py-4 text-lg font-semibold text-gray-500 transition-all',
+		'relative mt-12 flex w-full items-center justify-center rounded-xl bg-secondary-200/20 px-6 py-4 text-lg font-semibold text-gray-500 transition-all',
 		{
 			'text-secondary-100': remainingDigits === 0,
 			'animate-bounce-once': isInvalidCode

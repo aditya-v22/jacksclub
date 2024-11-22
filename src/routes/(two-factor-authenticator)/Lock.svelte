@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Lock, Unlock } from 'lucide-svelte';
-	import { twoFA_Store } from '../../stores/2FA_Store';
-	import { cn } from '$lib/utils/helper';
+	import { twoFA_Store } from '../../modules/auth/stores/2FA_Store';
+	import { cn } from '$lib';
 
 	const isValidCode = $derived($twoFA_Store.isCodeValid);
 	const isInvalidCode = $derived(!$twoFA_Store.isCodeValid && $twoFA_Store.remainingDigits === 0);
@@ -10,7 +10,7 @@
 <div class="flex w-full justify-center">
 	<div
 		class={cn(
-			'bg-primary-100/40 relative flex h-28 w-28 items-center justify-center rounded-full transition-all duration-1000',
+			'relative flex h-28 w-28 items-center justify-center rounded-full bg-primary-100/40 transition-all duration-1000',
 			{
 				'bg-green-100': isValidCode,
 				'animate-scale-and-reset bg-red-100': isInvalidCode

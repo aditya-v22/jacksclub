@@ -1,9 +1,10 @@
 <script lang="ts">
-	import DigitInput from '$lib/components/DigitInput.svelte';
-	import { cn } from '$lib/utils/helper';
-	import { useOutsideClick } from '$lib/utils/useOutsideClick';
-	import { validateNumber } from '$lib/validations/common';
-	import { twoFA_Store, setActiveFieldIndex, setCode, TOTAL_DIGITS } from '../../stores/2FA_Store';
+	import { cn } from '$lib';
+	import { useOutsideClick } from '$lib/actions/useOutsideClick';
+	import { validateNumber } from '$lib/validations';
+	import DigitInput from '../../modules/auth/components/DigitInput.svelte';
+	import { TOTAL_DIGITS } from '../../modules/auth/constants/2FA';
+	import { twoFA_Store, setActiveFieldIndex, setCode } from '../../modules/auth/stores/2FA_Store';
 
 	const secondLastIndex = TOTAL_DIGITS - 1;
 
