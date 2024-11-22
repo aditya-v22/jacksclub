@@ -1,6 +1,6 @@
 # Modules Folder
 
-The `modules/` folder is organized by features of the application. Each module contains assets, components, constants, stores, services, tests, utils and validations that are specific to that feature.
+The `modules/` folder is organized by features of the application. Each module contains components, constants, stores, services, tests, utils and validations that are specific to that feature.
 
 ## Folder Structure
 
@@ -14,7 +14,6 @@ To add a new feature/module to the application:
 
 1. **Create a New Folder**: Add a new folder inside `modules/` based on the new feature and create following sub folders inside new folder:
 
-     - `assets`
      - `components`
      - `services`
      - `utils`
@@ -23,7 +22,6 @@ To add a new feature/module to the application:
      - `tests`
      - `validations`
 2. **Organize Files**:
-   - Place assets inside `assets/`.
    - Place UI components inside `components/`.
    - Store APIs or related stuffs in `services/`.
    - Store reusable functions or logic in `utils/`.

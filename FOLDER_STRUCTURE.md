@@ -17,12 +17,7 @@ This is the main source folder, containing all the essential files and directori
 - Stores reusable constants across the project (e.g., apiEndpoints.ts, httpStatusCodes.ts).
 - Organize by category for clarity.
 
-### 3. **`assets/`**
-
-- Static assets like images, icons, and fonts.
-- Use subfolders for better organization.
-
-### 4. **`lib/`**
+### 3. **`lib/`**
 
 - Stores global utilities, custom actions, and validation logic.
 
@@ -33,19 +28,32 @@ This is the main source folder, containing all the essential files and directori
     ├── index.ts
   ```
 
-### 5. **`modules/`**
+### 4. **`modules/`**
 
 - Each feature or module (e.g., auth, profile) resides here. This promotes separation of concerns.
 - Each module contains its own components, stores, and services.
 - To deep dive in `modules` folder, please click [here](https://github.com/aditya-v22/jacksclub/tree/main/src/modules/README.md)
 
-### 6. **`routes/`**
+### 5. **`routes/`**
 
 - Manages application routing.
 
-### 7. **`stores/`**
+### 6. **`stores/`**
 
 - Contains Svelte stores for managing global, shareable state.
+
+---
+
+## **`static/`** Folder 📁  
+
+The `static/` folder contains files that are served directly without processing or transformation by SvelteKit. Use this folder for:  
+
+- **Public assets:** Images, icons, fonts, or other files accessed directly via a URL (e.g., `/static/logo.png`).  
+- **Favicons:** Application icons or meta images.  
+- **Robots.txt / Sitemap.xml:** SEO-related files.  
+- **External files:** Any resources (PDFs, documents) to be downloaded directly by users.  
+
+⚠️ **Note:** Avoid placing confidential files here since everything in `static/` is publicly accessible.
 
 ---
 
