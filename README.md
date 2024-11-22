@@ -2,6 +2,8 @@
 
 In this project I've created Two Factor Authentication component following this [design](https://dribbble.com/shots/10960055-Two-factor-authentication-2FA).
 
+To see the live demo, please click [here](https://jacksclub.vercel.app/)
+
 ## Tech Stack
 - Svelte 5
 - SvelteKit
