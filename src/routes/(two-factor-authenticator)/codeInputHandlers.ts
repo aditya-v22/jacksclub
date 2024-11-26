@@ -1,4 +1,4 @@
-import { validateSingleNumber } from '$lib/validations';
+import { validateNumber } from '$lib/validations';
 import { keyboardKeys } from '../../constants/keyboardKeys';
 import { LAST_INDEX } from '../../modules/auth/constants/2FA';
 import { SIX_DIGIT_CODE_REGEX } from '../../modules/auth/constants/regex';
@@ -25,7 +25,7 @@ export const handleInputChange = (event: Event, code: string[], index: number) =
 		return;
 	}
 
-	if (!validateSingleNumber(value)) {
+	if (!validateNumber(value)) {
 		// Clear the current input if it's not a digit
 		setCode('', index);
 		return;
