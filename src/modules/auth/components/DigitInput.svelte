@@ -24,6 +24,15 @@
 	}: DigitInputProps = $props();
 
 	const isEmpty = $derived(value === '');
+
+	const moveCursorToStart = (event: Event) => {
+		event.preventDefault();
+		const input = event.target as HTMLInputElement;
+
+		setTimeout(() => {
+			input.setSelectionRange(0, 0);
+		}, 0);
+	};
 </script>
 
 <div
@@ -39,11 +48,13 @@
 >
 	<input
 		type="text"
-		maxlength="1"
+		maxlength="2"
 		bind:value
 		oninput={onInputChange}
 		onkeydown={onKeyDown}
 		onpaste={onPaste}
+		onfocus={moveCursorToStart}
+		onclick={moveCursorToStart}
 		class={cn(
 			'absolute h-10 w-6 bg-inherit text-center text-4xl text-sky-500 caret-transparent outline-none transition-all duration-300',
 			{

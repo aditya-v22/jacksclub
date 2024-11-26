@@ -19,9 +19,9 @@ import {
 export const handleInputChange = (event: Event, code: string[], index: number) => {
 	const input = event.target as HTMLInputElement;
 	const value = input.value;
-	const hasValue = value.length === 1;
+	const valueLength = value.length;
 
-	if (!hasValue) {
+	if (!valueLength) {
 		return;
 	}
 
@@ -31,14 +31,18 @@ export const handleInputChange = (event: Event, code: string[], index: number) =
 		return;
 	}
 
-	setCode(value, index);
+	if (valueLength === 1) {
+		setCode(value, index);
+	} else {
+		setCode(value.at(0) as string, index);
+	}
 
-	if (hasValue && index < LAST_INDEX) {
+	if (index < LAST_INDEX) {
 		const emptyFieldIndex = moveFocusToFirstEmptyField(code);
 		if (emptyFieldIndex === -1) {
 			moveFocus(index + 1);
 		}
-	} else if (hasValue && index === LAST_INDEX) {
+	} else if (index === LAST_INDEX) {
 		setActiveFieldIndex(-1);
 	}
 };
