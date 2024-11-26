@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { calculateRemainingDigits, validate2FA_Code } from '../utils/2FA_Helpers';
+import { calculateRemainingDigits, validate2FA_Code } from '../utils/2FA/helpers';
 
 interface CodeVerificationState {
 	code: string[];
