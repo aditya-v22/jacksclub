@@ -6,6 +6,7 @@
 		onClick: (e: Event) => void;
 		onInputChange: (e: Event) => void;
 		onKeyDown: (e: KeyboardEvent) => void;
+		onPaste: (e: ClipboardEvent) => void;
 	}
 </script>
 
@@ -16,6 +17,7 @@
 		onClick,
 		onInputChange,
 		onKeyDown,
+		onPaste,
 		focused,
 		invalid,
 		value = $bindable('')
@@ -41,6 +43,7 @@
 		bind:value
 		oninput={onInputChange}
 		onkeydown={onKeyDown}
+		onpaste={onPaste}
 		class={cn(
 			'absolute h-10 w-6 bg-inherit text-center text-4xl text-sky-500 caret-transparent outline-none transition-all duration-300',
 			{
