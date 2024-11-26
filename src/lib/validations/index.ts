@@ -7,5 +7,5 @@ import { NUMBER_REGEX } from '../../constants/regex';
  * @returns Whether the given string is a valid number.
  */
 export const validateNumber = (value: string) => {
-	return NUMBER_REGEX.test(value);
+  return NUMBER_REGEX.test(value);
 };

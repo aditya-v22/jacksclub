@@ -44,14 +44,14 @@ This is the main source folder, containing all the essential files and directori
 
 ---
 
-## **`static/`** Folder 📁  
+## **`static/`** Folder 📁
 
-The `static/` folder contains files that are served directly without processing or transformation by SvelteKit. Use this folder for:  
+The `static/` folder contains files that are served directly without processing or transformation by SvelteKit. Use this folder for:
 
-- **Public assets:** Images, icons, fonts, or other files accessed directly via a URL (e.g., `/static/logo.png`).  
-- **Favicons:** Application icons or meta images.  
-- **Robots.txt / Sitemap.xml:** SEO-related files.  
-- **External files:** Any resources (PDFs, documents) to be downloaded directly by users.  
+- **Public assets:** Images, icons, fonts, or other files accessed directly via a URL (e.g., `/static/logo.png`).
+- **Favicons:** Application icons or meta images.
+- **Robots.txt / Sitemap.xml:** SEO-related files.
+- **External files:** Any resources (PDFs, documents) to be downloaded directly by users.
 
 ⚠️ **Note:** Avoid placing confidential files here since everything in `static/` is publicly accessible.
 

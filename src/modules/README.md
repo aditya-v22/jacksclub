@@ -14,13 +14,14 @@ To add a new feature/module to the application:
 
 1. **Create a New Folder**: Add a new folder inside `modules/` based on the new feature and create following sub folders inside new folder:
 
-     - `components`
-     - `services`
-     - `utils`
-     - `constants`
-     - `stores`
-     - `tests`
-     - `validations`
+   - `components`
+   - `services`
+   - `utils`
+   - `constants`
+   - `stores`
+   - `tests`
+   - `validations`
+
 2. **Organize Files**:
    - Place UI components inside `components/`.
    - Store APIs or related stuffs in `services/`.

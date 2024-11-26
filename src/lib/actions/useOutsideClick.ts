@@ -10,15 +10,15 @@ import { onDestroy } from 'svelte';
  * @param callback The function to call when the user clicks outside of the node.
  */
 export function useOutsideClick(node: HTMLElement, callback: () => void) {
-	const handleClick = (event: MouseEvent) => {
-		if (!node.contains(event.target as Node)) {
-			callback();
-		}
-	};
+  const handleClick = (event: MouseEvent) => {
+    if (!node.contains(event.target as Node)) {
+      callback();
+    }
+  };
 
-	document.addEventListener('click', handleClick);
+  document.addEventListener('click', handleClick);
 
-	onDestroy(() => {
-		document.removeEventListener('click', handleClick);
-	});
+  onDestroy(() => {
+    document.removeEventListener('click', handleClick);
+  });
 }
