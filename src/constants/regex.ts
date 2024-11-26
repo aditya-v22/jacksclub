@@ -1,1 +1,1 @@
-export const NUMBER_REGEX = /^\d+$/;
+export const SINGLE_NUMBER_REGEX = /^[0-9]$/;
